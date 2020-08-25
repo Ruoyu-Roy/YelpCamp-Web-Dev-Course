@@ -1,0 +1,21 @@
+h1 {
+	color: red;
+	border: white;
+	border-width: 1px;
+	border-style: solid;
+}
+
+li {
+	color: green;
+}
+
+h4 {
+	background: rgb(255,100,80,0.5);
+	border: 2px solid rgb(255,100,80,1);
+}
+
+body{
+	background: url(https://wallpaperaccess.com/full/1113972.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}

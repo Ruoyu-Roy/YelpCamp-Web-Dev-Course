@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circles!</title>
+    <script src="paperjs-v0.12.11/dist/paper-full.js"></script>
+    <script src="howler.js-master/dist/howler.js"></script>
+    <link rel="stylesheet" href="circle.css" />
+    <script type="text/paperscript" canvas="myCanvas">
+
+      var keyData = {
+        a: {
+          color: "purple",
+          sound: new Howl({
+            src: ['sounds/bubbles.mp3']
+          })
+        },
+        s: {
+          color: "#16a085",
+          sound: new Howl({
+            src: ['sounds/clay.mp3']
+          })
+        }
+      }
+
+      console.log(1)
+
+      var circles = [];
+
+      function onKeyDown(event) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+
+        var newcircle = new Path.Circle(point, 500);
+        keyData[event.key].sound.play();
+        newcircle.fillColor = keyData[event.key].color;
+        circles.push(newcircle);
+      }
+
+      function onFrame(event) {
+        for (var i = 0; i < circles.length; i++) {
+          circles[i].fillColor.hue += 1;
+          circles[i].scale(0.9)
+          if (circles[i].area < 1) {
+            circles[i].remove()
+            circles.splice(i,1)
+            console.log(circles)
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <canvas id="myCanvas" resize></canvas>
+  </body>
+</html>

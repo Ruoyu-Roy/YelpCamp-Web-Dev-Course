@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is the 4th quiz.</title>
+</head>
+<body>
+
+<h1>Register</h1>
+
+<form>
+	
+	<label for="firstName">First Name: </label>
+	<input id="firstName" type="text" name="firstName" required placeholder="John">
+	<label for="secondName">Second Name: </label>
+	<input type="text" name="secondName" id="secondName" required="1" placeholder="Smith">
+
+	<div>
+		<label>Gender: </label>
+		<label for="male">Male</label>
+		<input type="radio" name="gender" id="male" value="male">
+		<label for="female">Female</label>
+		<input type="radio" name="gender" id="female" value="female">
+		<label for="other">Other</label>
+		<input type="radio" name="gender" id="other" value="other">
+	</div>
+
+	<div>
+		<label for="email">Email: </label>
+		<input type="email" name="email" required="1" placeholder="your email">
+		<label for="password">Password: </label>
+		<input type="password" name="password" required="1" placeholder="your password" pattern=".{5,10}" title="5 to 10 charactors needed">
+	</div>
+
+	<div>
+		<label>
+			Birthday: 
+			<select name="month">
+				<option value="month">Month</option>
+				<option value="jan">Jan</option>
+				<option value="feb">Feb</option>
+				<option value="mar">Mar</option>
+				<option value="apr">Apr</option>
+				<option value="may">May</option>
+				<option value="jun">Jun</option>
+				<option value="jul">Jul</option>
+				<option value="aug">Aug</option>
+				<option value="sep">Sep</option>
+				<option value="oct">Oct</option>
+				<option value="nov">Nov</option>
+				<option value="dec">Dec</option>
+			</select>
+
+			<select month="day">
+				<option >Day</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+			</select>
+
+			<select month="year">
+				<option>Year</option>
+				<option value="1999">1998</option>
+				<option value="1998">1999</option>
+				<option value="1997">1997</option>
+			</select>
+
+		</label>
+	</div>
+
+	<div>
+		<label>
+			I agree to the terms and conditions
+			<input type="checkbox" name="agreement" value="">
+		</label>
+	</div>
+
+	<button>submit</button>
+
+</form>
+
+</body>
+</html>

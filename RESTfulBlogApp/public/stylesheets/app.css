@@ -1,0 +1,19 @@
+i.icon {
+  font-size: 2em;
+}
+
+.ui.main.text.container {
+  margin-top: 7em;
+}
+
+#delete {
+  display: inline;
+}
+
+.right.chevron.icon {
+  font-size: inherit;
+}
+
+#readmore {
+  font-size: 1rem;
+}
